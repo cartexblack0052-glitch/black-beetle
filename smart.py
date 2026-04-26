@@ -3,7 +3,8 @@ import google.generativeai as genai
 import datetime
 
 # 1. API Setup
-genai.configure(api_key="AIzaSyCrVL-JqStctO4kxOWZ8a8JHOa3E_XfRlU")
+genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
+
 
 # 2. Page Config
 st.set_page_config(page_title="Study Smart AI", page_icon="📚", layout="centered")
@@ -11,7 +12,6 @@ st.set_page_config(page_title="Study Smart AI", page_icon="📚", layout="center
 # 3. Sidebar - Dashboard
 with st.sidebar:
     st.title("Project Dashboard")
-    # Added "General Inquiry" for normal chatting
     subject = st.selectbox(
         "Choose your Subject:",
         ("General Inquiry", "Geography", "History", "Chemistry", "Math", "Physics", "Biology")
