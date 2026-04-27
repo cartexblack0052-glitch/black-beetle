@@ -6,6 +6,7 @@ import datetime
 genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
 
+
 # 2. Page Config
 st.set_page_config(page_title="Study Smart AI", page_icon="📚", layout="centered")
 
